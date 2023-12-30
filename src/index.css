@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .container-sm {
+        @apply max-w-[720px] mx-auto px-3 lg:px-0;
+    }
+}
