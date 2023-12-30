@@ -99,9 +99,15 @@ export default function Index() {
                 </li>
                 <li>
                     <div className="flex flex-col">
-                        <h4 className="font-medium">
-                            Perbarui Scripts dalam package.json:
-                        </h4>
+                        <h4 className="font-medium">Perbarui package.json:</h4>
+                        <p>
+                            Tambahkan key <Hi>"homepage"</Hi> dengan format
+                            sebagai berikut:
+                        </p>
+                        <CodeBlock codeType="javascript">{`{
+  ...,
+  "homepage": "http://{github-username}.github.io/{repo-name}",
+}`}</CodeBlock>
                         <p>
                             Tambahkan perintah <Hi>gh:deploy</Hi> ke bagian{" "}
                             <Hi>"scripts"</Hi> dalam file <Hi>package.json</Hi>:
