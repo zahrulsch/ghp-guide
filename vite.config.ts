@@ -10,4 +10,5 @@ export default defineConfig({
             languages: ["bash", "javascript", "json"],
         }),
     ],
+    base: "",
 })
