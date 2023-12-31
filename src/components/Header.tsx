@@ -70,7 +70,7 @@ export default function Header(props: HeaderProps) {
                             <NavLink
                                 className={({ isActive }) =>
                                     isActive
-                                        ? "uppercase text-sm p-2 bg-slate-900 text-white"
+                                        ? "uppercase text-sm p-2 bg-stone-900 text-white"
                                         : "uppercase text-sm p-2"
                                 }
                                 key={nav.key}
