@@ -1,16 +1,25 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Header from "./components/Header"
-import Index from "./views"
-import About from "./views/about"
+import { lazy, Suspense } from "react"
+import { HashRouter, Route, Routes } from "react-router-dom"
+const Header = lazy(() => import("./components/Header"))
+const Index = lazy(() => import("./views"))
+const About = lazy(() => import("./views/about"))
 
 const routes = [
     {
         path: "/",
-        element: <Index />,
+        element: (
+            <Suspense>
+                <Index />
+            </Suspense>
+        ),
     },
     {
         path: "/about",
-        element: <About />,
+        element: (
+            <Suspense>
+                <About />
+            </Suspense>
+        ),
     },
 ]
 
@@ -18,9 +27,11 @@ const ig = "https://www.instagram.com/zahrulsch/"
 
 function App() {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <div className="w-full">
-                <Header />
+                <Suspense>
+                    <Header />
+                </Suspense>
                 <div className="container-sm mt-2">
                     <Routes>
                         {routes.map((route) => (
@@ -54,7 +65,7 @@ function App() {
                     </div>
                 </footer>
             </div>
-        </BrowserRouter>
+        </HashRouter>
     )
 }
 

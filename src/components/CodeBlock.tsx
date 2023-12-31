@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import Prism, { highlight } from "prismjs"
 import "../code.css"
 
-type Codes = "javascript" | "bash"
+type Codes = "bash" | "javascript" | "json" | "typescript" | "jsx" | "tsx"
 
 export type CodeBlockProps = {
     children?: string

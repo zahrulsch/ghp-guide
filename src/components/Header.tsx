@@ -61,13 +61,21 @@ export default function Header(props: HeaderProps) {
                 {...getReferenceProps()}
                 {...props}
             >
-                <div className="container-sm py-2 flex justify-between items-center">
+                <div className="container-sm flex justify-between items-center">
                     <NavLink className="text-2xl" to="/">
                         <BsGithub />
                     </NavLink>
-                    <div className="gap-2 hidden sm:flex">
+                    <div className="gap-2 hidden sm:inline-flex">
                         {navs.map((nav) => (
-                            <NavLink key={nav.key} to={nav.href}>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? "uppercase text-sm p-2 bg-slate-900 text-white"
+                                        : "uppercase text-sm p-2"
+                                }
+                                key={nav.key}
+                                to={nav.href}
+                            >
                                 {nav.text}
                             </NavLink>
                         ))}
