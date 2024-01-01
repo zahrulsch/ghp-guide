@@ -28,11 +28,11 @@ const ig = "https://www.instagram.com/zahrulsch/"
 function App() {
     return (
         <HashRouter>
-            <div className="w-full">
+            <div className="w-full min-h-[100dvh] flex flex-col">
                 <Suspense>
                     <Header />
                 </Suspense>
-                <div className="container-sm mt-2">
+                <div className="container-sm mt-2 w-full flex-1">
                     <Routes>
                         {routes.map((route) => (
                             <Route

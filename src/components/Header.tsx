@@ -82,7 +82,7 @@ export default function Header(props: HeaderProps) {
                     </div>
                     <button
                         onClick={() => setOpen((v) => !v)}
-                        className={"py-2 sm:hidden"}
+                        className={"py-3.5 sm:hidden"}
                         tabIndex={0}
                     >
                         {open ? (

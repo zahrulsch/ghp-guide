@@ -15,7 +15,7 @@ export default function Index() {
                 <h1 className="text-center text-2xl font-extrabold">
                     Tutorial Instant 😎 Deploy React App di Github Page
                 </h1>
-                <p className="text-center text-black/60 font-light">
+                <p className="text-center text-black/60">
                     Ditulis Oleh{" "}
                     <a
                         href={ig}
